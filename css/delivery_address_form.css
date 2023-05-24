@@ -1,0 +1,12 @@
+#sidebar{
+    display: none;
+}
+.material-icons{
+    display: none;
+}
+.container-fluid{
+    height: 1000px;
+}
+.wrapper .container{
+    margin-top: 50px;
+}

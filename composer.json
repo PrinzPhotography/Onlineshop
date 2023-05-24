@@ -1,0 +1,7 @@
+{
+  "require": {
+    "dompdf/dompdf": "^1.1.0",
+    "ext-json": "*",
+    "ext-pdo": "*"
+  }
+}

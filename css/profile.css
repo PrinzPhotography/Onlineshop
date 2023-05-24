@@ -1,0 +1,32 @@
+
+.wrapper .container{
+    margin-top: 50px;
+    /*border: 1px solid black;*/
+}
+.wrapper .container .row {
+    margin-top: 50px;
+    /*border: 1px solid black;*/
+}
+.wrapper .container .row .col-3{
+/*    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid darkred;
+    background: lightblue;*/
+}
+
+.card-body strong{
+    padding-left: 10%;
+}
+.card-body {
+
+    cursor:pointer;
+
+}
+.spacing {
+    margin: 0 auto;
+}
+#btn_reset_all {
+
+    margin-left:0.5%;
+
+}

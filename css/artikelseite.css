@@ -1,0 +1,194 @@
+
+#artikelbild {
+    height:400px;
+    width:40%;
+    margin-top:1%;
+    float:left;
+}
+#artikelname {
+    height:50px;
+    width:50%;
+    float:left;
+    margin-top:1%;
+    margin-left:4%;
+    font-size:30px;
+    font-weight:bold;
+}
+#artikeldetails {
+    height:340px;
+    width:50%;
+    float:left;
+    margin-top:1%;
+    margin-left:4%;
+    font-size:20px;
+    padding-top:3%;
+    border-top:solid grey 1px;
+}
+#artikelbeschreibung {
+    height:450px;
+    width:94%;
+    float:left;
+    margin-top:1%;
+    font-size:20px;
+    text-align: justify;
+    padding:4%;
+    padding-left:0%;
+    border-top:solid grey 1px;
+    border-bottom:solid grey 1px;
+}
+.menge {
+    width:15%;
+}
+.selec {
+    width:15%;
+}
+#in_den_warenkorb {
+    margin-left:2%;
+}
+#menge_warenkorb {
+    margin-top:1%;
+    margin-right:5%;
+    float:right;
+    text-align: right;
+}
+#div_preis {
+    width:100%;
+    float:right;
+    text-align:right;
+    margin-right:5%;
+}
+#div_preis i {
+    font-size:16px;
+    font-style: italic;
+}
+.verfuegbarkeit {
+    font-size:16px;
+}
+#div_kundenbewertung {
+    margin-top:2%;
+    float:left;
+    text-align:center;
+    width:94%;
+}
+#bewertung_text {
+    width:54%;
+    height:150px;
+    margin-top:4%;
+}
+#div_sterne {
+    float:left;
+    width:94%;
+    margin-left:42.5%;
+}
+#div_bewertung_text {
+    margin-left:27%;
+}
+#div_bewertung {
+    width:94%;
+    height:auto;
+    margin-top:3%;
+    border-bottom:solid grey 1px;
+    padding-bottom:2%;
+    padding-top:2%;
+}
+#div_bewertung hr {
+    width:10%;
+}
+.star-cb-group {
+    /* remove inline-block whitespace */
+    font-size: 0;
+    /* flip the order so we can use the + and ~ combinators */
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    /* the hidden clearer */
+}
+.star-cb-group * {
+    font-size: 1.5rem;
+}
+.star-cb-group > input {
+    display: none;
+}
+.star-cb-group > input + label {
+    /* only enough room for the star */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 9999px;
+    width: 1em;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.star-cb-group > input + label:before {
+    display: inline-block;
+    text-indent: -9999px;
+    content: "☆";
+    color: #888;
+}
+.star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
+    content: "★";
+    color: #e52;
+    text-shadow: 0 0 1px #333;
+}
+.star-cb-group > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+    width: .5em;
+}
+.star-cb-group:hover > input + label:before {
+    content: "☆";
+    color: #888;
+    text-shadow: none;
+}
+.star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
+    content: "★";
+    color: #e52;
+    text-shadow: 0 0 1px #333;
+}
+.star-cb-group-user {
+    /* remove inline-block whitespace */
+    font-size: 0;
+    /* flip the order so we can use the + and ~ combinators */
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    /* the hidden clearer */
+}
+.star-cb-group-user * {
+    font-size: 1.5rem;
+}
+.star-cb-group-user > input {
+    display: none;
+}
+.star-cb-group-user > input + label {
+    /* only enough room for the star */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 9999px;
+    width: 1em;
+    white-space: nowrap;
+}
+.star-cb-group-user > input + label:before {
+    display: inline-block;
+    text-indent: -9999px;
+    content: "☆";
+    color: #888;
+}
+.star-cb-group-user > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+}
+.star-cb-group-user > .star-cb-clear + label:before {
+    width: .5em;
+}
+.star-cb-group-user > input:checked ~ label:before {
+    content: "★";
+    color: #e52;
+    text-shadow: 0 0 1px #333;
+}
+#btn_reset_all {
+
+    margin-left:0.5%;
+
+}

@@ -1,0 +1,74 @@
+.input_field {
+    height:40px;
+    width:200px;
+}
+#artikel_anlegen {
+    margin-top:4%;
+}
+#warengruppe_anlegen {
+    margin-top:4%;
+}
+#new_article {
+    width:80%;
+}
+#neue_warengruppe {
+}
+#div_artikel {
+    float:left;
+    width:100%;
+    height:auto;
+    margin-left:11%;
+    margin-top:3%;
+}
+#div_warengruppe {
+    float:left;
+    width:80%;
+    margin-left:9%;
+    margin-top:10%;
+}
+.form-control {
+    width:100%;
+}
+.label_artikel_anlegen {
+    font-weight:bold;
+    float:left;
+}
+.artikel_anlegen {
+    margin-top:4%;
+    width:49%;
+}
+#artikel_anlegen {
+    width:49%;
+}
+h3 {
+    margin-left:4%;
+}
+#artikel_anlegen_überschrift {
+    width:65%;
+}
+#überschrift {
+    margin-top:5%;
+    margin-left:15%;
+    width:40%;
+}
+#überschrift2 {
+    margin-top:5%;
+    margin-left:10%;
+    width:35%;
+}
+#warengruppe_anlegen_überschrift {
+    width:70%;
+}
+#card {
+    width:40%;
+    float:left;
+    margin-left:23%;
+    margin-top:5%;
+    box-shadow:1px 1px 3px darkgrey;
+}
+#btn_reset_all {
+
+    margin-left:0.5%;
+
+}
+

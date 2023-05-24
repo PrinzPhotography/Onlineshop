@@ -1,0 +1,87 @@
+.artikel_spalte {
+    width:80%;
+    margin-left:10%;
+    height:280px;
+    box-shadow:1px 1px 3px darkgrey;
+}
+.artikel_bild {
+    height:250px;
+    width:30%;
+    float:left;
+}
+.artikel_name {
+    height:70px;
+    width:70%;
+    float:left;
+    font-weight:bold;
+    font-size:24px;
+    padding: 15px;
+    padding-left:10px;
+}
+.bewertung {
+    height:40px;
+    width:70%;
+    float:left;
+    padding-left:10px;
+}
+.preis {
+    height:60px;
+    width:70%;
+    float:left;
+    font-weight:bold;
+    font-size:18px;
+    padding-left:10px;
+}
+.details {
+    height:80px;
+    width:20%;
+    float:left;
+    padding: 5px;
+    padding-left:10px;
+}
+.article_image {
+    width:80%;
+    height:80%;
+    margin-top:5%;
+}
+.artikel_spalte {
+    margin-top:1%;
+}
+ul {
+    list-style: none;
+}
+.suche_artikelliste {
+    width:40%;
+    margin-left:30%;
+    margin-top:2%;
+}
+#btn_reset_all {
+    margin-left:0.5%;
+}
+.sum_col {
+    width:80%;
+    margin-left:10%;
+    height:60px;
+    box-shadow:1px 1px 3px darkgrey;
+}
+/*.sum_preis span{
+
+    font-weight:bold;
+    font-size:18px;
+    padding: 15px;
+    padding-left:10px;
+    text-align: right;
+}*/
+.artikelbez{
+    height:40px;
+    width:70%;
+    float:left;
+    padding-left:10px;
+}
+.sum_price{
+    margin-left: 80%;
+}
+#delete_artikel {
+    float:left;
+    margin-top:1%;
+}

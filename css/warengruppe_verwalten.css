@@ -1,0 +1,56 @@
+.warengruppe {
+    width:280px;
+    height:230px;
+    margin-left:1%;
+    margin-top:1%;
+    float:left;
+    box-shadow:1px 1px 3px darkgrey;
+}
+.details_warengruppe {
+    width:100%;
+    height:150px;
+    margin-top:3%;
+}
+.btn-primary {
+    padding:2%;
+    margin-top:3%;
+}
+.btn_article_mainsite {
+    float:left;
+    margin-left:33%;
+}
+.warengruppe {
+    margin-left:2%;
+    margin-top:2%;
+}
+.container-sm-6 {
+    margin-left:10%;
+}
+#warengruppe_speichern {
+    padding:2% 5%;
+    width:237px;
+}
+#zurück {
+    padding:2% 5%;
+    width:240px;
+    margin-top:3%;
+}
+#warengruppe_neu {
+    width:70%;
+    margin-left:15%;
+}
+#warengruppe_bearbeiten {
+    width:100%;
+    font-weight:bold;
+}
+#card_warengrp {
+    width:40%;
+    margin-top:5%;
+    margin-left:25%;
+    box-shadow:1px 1px 3px darkgrey;
+}
+#btn_reset_all {
+
+    margin-left:0.5%;
+
+}

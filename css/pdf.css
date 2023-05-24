@@ -1,0 +1,128 @@
+@page{
+    margin-bottom: 3cm;
+    margin-left: 2.5cm;
+    margin-right: 1cm;
+    margin-top: 4.0cm;
+    font-size: 10pt;
+    border-spacing: 0;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+
+}
+
+table td{
+    padding:0;
+}
+p{
+    padding:0;
+    margin:0;
+}
+.title {
+    font-weight: bold;
+    border: 1px solid #000;
+    text-align: right;
+    padding-right: 5px;
+}
+.anschrift {
+    width: 85mm;
+    height: 40mm;
+    float: left;
+    margin-top: 11mm;
+    font-size: 14px;
+}
+.firma {
+    font-size: 8px;
+    text-decoration: underline;
+    margin-bottom: 2mm;
+}
+
+.ab-infos {
+    margin-top:10mm;
+    float: right;
+    width: 45%;
+}
+.ab-infos .beschreibung {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ab-infos .infos {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 8px;
+}
+.infos > table tr td:not(:first-child):not(:last-child){
+    width: 30%;
+}
+.ab-infos .infos table {
+    width: 100%
+}
+.content table {
+    border-collapse: collapse;
+    margin-top: 4mm;
+    width: 100%;
+}
+.content table thead {
+    border: 1px solid black;
+}
+.content table th {
+    text-align: left;
+    font-size: 11px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.content table td {
+    vertical-align: top;
+    text-align: right;
+    font-size: 14px;
+    padding: 3px 5px 3px 5px;
+}
+
+.daten {
+    margin-top: 2mm;
+    margin-bottom: 2mm;
+}
+.unsere-daten {
+    font-size: 11px;
+    float: left;
+    width: 50%;
+}
+.unsere-daten table td{
+    vertical-align:top;
+}
+.ihre-daten {
+    float: right;
+    width: 300px;
+}
+
+.ihre-daten span {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.rechnungsbetrag  {
+    font-weight: bold;
+    page-break-before:inherit;
+    margin-bottom: 0px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.rechnungsbetrag table { border-spacing: 0; }
+.rechnungsbetrag table tr td { padding-top: 2px; padding-bottom: 2px;}
+.rechnungsbetrag .nettoBetrag > td { border-top: 1px solid #000; }
+.rechnungsbetrag .bruttoBetrag > td { border-top: 2px solid #000; border-bottom: 1px solid #000; }
+
+.text {
+    margin-top: 2mm;
+    margin-left: 2px;
+    clear:both;
+    page-break-inside: avoid;
+    font-size: 11px;
+}

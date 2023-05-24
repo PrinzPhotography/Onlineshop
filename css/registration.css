@@ -1,0 +1,48 @@
+
+#rgn_btn {
+    padding:2%;
+    width:49.2%;
+    margin-top:4%;
+}
+#btn_lgn{
+    padding:2%;
+    width:49.2%;
+    margin-top:4%;
+}
+
+#sidebarCollapse {
+    position: fixed;
+}
+
+#usercheck{
+    display: none;
+}
+#usercheck1{
+    display: none;
+}
+#usercheck2{
+    display: none;
+}
+#passcheck{
+    display: none;
+}
+#conpasscheck{
+    display: none;
+}
+#emailcheck{
+    display: none;
+}
+
+.form-group p{
+
+    font-size: 10px;
+}
+#card_registrieren {
+    width:50%;
+    margin-top:10%;
+    margin-left:18%;
+    box-shadow:1px 1px 3px darkgrey;
+}
+#form_registrieren {
+    width:100%;
+}

@@ -1,0 +1,19 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  only:
+    - main
+  tags:
+    - azubi-shop
+  variables:
+    PROJECTPATH: "/var/www/azubi-shop"
+  script:
+    - rm ./README.md
+    - mkdir ./templates_c
+    - chmod -R 777 ./templates_c/
+    - rm -Rf $PROJECTPATH/*
+    - cp -Rp ./* $PROJECTPATH
+    - chown -R webuser:www-data $PROJECTPATH/
+    - chmod -R 775 $PROJECTPATH/

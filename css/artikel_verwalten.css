@@ -1,0 +1,139 @@
+
+.all_articles {
+    height:580px;
+    margin-top:3%;
+    float:left;
+    margin-left:2%;
+}
+.article {
+    width:100%;
+    height:100%;
+    margin-left:3%;
+    margin-top:3%;
+    float:left;
+    box-shadow:1px 1px 3px darkgrey;
+}
+.article_image {
+    width:100%;
+    height:170px;
+    border-bottom:solid black 1px;
+}
+.details_artikel {
+    width:80%;
+    height:200px;
+    margin-top:3%;
+}
+.details_artikel ul {
+    list-style: none;
+}
+.price span {
+    float:left;
+    font-weight:bold;
+    padding-top:8%;
+    padding-bottom:5%;
+    padding-left:5%;
+}
+.btn_article_mainsite {
+    margin-left:23%;
+    margin-bottom: 5px;
+}
+#btn_search_edit {
+    padding:1%;
+}
+.produktbilder {
+    width:100%;
+    height:100%;
+}
+.suche_artikelliste {
+    width:40%;
+    margin-left:30%;
+    margin-top:2%;
+}
+.btn-primary {
+    padding:2%;
+}
+#artikel_speichern {
+    padding:0%;
+    height:40px;
+    width:275px;
+    margin-top:4%;
+}
+#zurück {
+    padding:0%;
+    height:40px;
+    width:270px;
+    margin-left:0.5%;
+    margin-top:4%;
+}
+#artikel_nr {
+    height:40px;
+    width:100%;
+}
+#artikel_name {
+    height:40px;
+    width:100%;
+}
+#artikel_bez {
+    height:80px;
+    width:100%;
+}
+#hersteller {
+    height:40px;
+    width:100%;
+}
+#preis {
+    height:40px;
+    width:100%;
+}
+#lagerbestand {
+    height:40px;
+    width:100%;
+}
+#warengruppe {
+    height:40px;
+    width:100%;
+}
+#image {
+    height:40px;
+    width:100%;
+}
+#verfuegbarkeit {
+    height:40px;
+    width:100%;
+}
+.label_artikel_verwalten {
+
+    font-weight:bold;
+}
+hr {
+    width:30%;
+    margin-left:30%;
+    margin-bottom:3%;
+}
+#ueberschrift {
+    margin-left:36.5%;
+    font-size:28px;
+    font-weight:bold;
+}
+#btn_artikel_bearbeiten {
+    margin-top:48%;
+    margin-bottom:2%;
+    margin-left:25%;
+}
+#btn_reset_edit {
+    margin-left:0.5%;
+}
+#card_bearbeiten {
+    width:40%;
+    margin-left:25%;
+    box-shadow:1px 1px 3px darkgrey;
+}
+#artikel_bearbeiten {
+    width:80%;
+    margin-left:10%;
+}
+#btn_reset_all {
+
+    margin-left:0.5%;
+
+}

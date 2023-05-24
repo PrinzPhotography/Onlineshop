@@ -1,0 +1,155 @@
+.artikel_spalte {
+    width:60%;
+    margin-left:10%;
+    height:280px;
+    box-shadow:1px 1px 3px darkgrey;
+}
+.artikel_bild {
+    height:250px;
+    width:30%;
+    float:left;
+}
+.artikel_name {
+    height:70px;
+    width:25%;
+    float:left;
+    font-weight:bold;
+    font-size:24px;
+    padding: 15px;
+    padding-left:10px;
+
+}
+.bewertung {
+    height:40px;
+    width:25%;
+    float:left;
+    padding: 5px;
+    padding-left:10px;
+
+}
+.preis {
+    height:60px;
+    width:26%;
+    float:left;
+    font-weight:bold;
+    font-size:18px;
+    padding: 15px;
+    padding-left:10px;
+
+}
+.details {
+    height:80px;
+    width:45%;
+    float:left;
+    padding: 13px;
+    padding-left:10px;
+}
+.details ul {
+    list-style: none;
+}
+.article_image {
+    width:80%;
+    height:80%;
+    margin-top:5%;
+}
+.artikel_spalte {
+    margin-top:1%;
+}
+.suche_artikelliste {
+    width:40%;
+    margin-left:30%;
+    margin-top:2%;
+}
+#btn_reset_all {
+    margin-left:0.5%;
+}
+.zum_artikel {
+    float:left;
+    width:15%;
+    margin-top:5%;
+    margin-left:0%;
+}
+.shopping_cart {
+    float:left;
+    margin-left:1%;
+    width:8%;
+    margin-top:5%;
+}
+.sum_col {
+    width:80%;
+    margin-left:10%;
+    height:60px;
+    box-shadow:1px 1px 3px darkgrey;
+}
+/*.sum_preis span{
+
+    font-weight:bold;
+    font-size:18px;
+    padding: 15px;
+    padding-left:10px;
+    text-align: right;
+}*/
+.artikel_bez{
+    height:110px;
+    width:20%;
+    float:right;
+    font-size:16px;
+    margin-top:5%;
+    margin-right:20%;
+}
+.sum_price{
+    margin-left: 80%;
+}
+.verfuegbarkeit {
+    font-weight:bold;
+}
+.sterne {
+    float:left;
+    margin-top:-1%;
+    margin-left:1.5%;
+    font-size:14px;
+}
+span {
+    color:black;
+}
+.star-cb-group {
+    /* remove inline-block whitespace */
+    font-size: 0;
+    /* flip the order so we can use the + and ~ combinators */
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    /* the hidden clearer */
+}
+.star-cb-group * {
+    font-size: 1.5rem;
+}
+.star-cb-group > input {
+    display: none;
+}
+.star-cb-group > input + label {
+    /* only enough room for the star */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 9999px;
+    width: 1em;
+    white-space: nowrap;
+}
+.star-cb-group > input + label:before {
+    display: inline-block;
+    text-indent: -9999px;
+    content: "☆";
+    color: #888;
+}
+.star-cb-group > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+    width: .5em;
+}
+.star-cb-group > input:checked ~ label:before {
+    content: "★";
+    color: #e52;
+    text-shadow: 0 0 1px #333;
+}

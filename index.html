@@ -1,0 +1,486 @@
+{include file="header.html"}
+<div class="DssHeader" style="transition: unset; width: 100%; left: 0px;">
+    <div class="MaskInitTitle animated flipInX" style="padding-left: 50px;">{$vars_array.terminal_name}</div>
+    <div class="leftside">
+        <div class="small_logo primary-color">{svg svg="logos/smart_logo_white.svg" stripLinebreak=true}</div></div>
+    <div class="userinfo">
+        <div class="user">
+            <div id="time" class="float-left" style="font-size: 16px;"></div>
+        </div>
+    </div>
+</div>
+
+<div id="container1" class="container" style="margin-top: 70px;">
+    <div class="row center derpBox">
+        <div class="col s12 m12 l12">
+            <input type="password"
+                   id="persnr"
+                   name="persnr"
+                   autocomplete="off"
+                   class="inputNumber derpInputBig"
+                   placeholder="{$vars_array.rfid_input_text}"
+                   maxlength="145"
+                   style="width: 60%; margin-bottom: 10px; box-shadow: 0px 0px 1px 0px; border-radius: 5px; padding: 5px; background-color: #f9f9fc;"
+            >
+        </div>
+        <div class="col s12 m12 l12" style="margin-top: 20px;">
+            {if $vars_array.work_mode == 'true'}
+
+                {if $vars_array.button1_visible == 'true'}
+                    <btn id="kommenbtn" class="derpButton" onclick="" style="background-color: {$greyColor};"><div> <i class="material-icons">done</i> </div> {$vars_array.button1label}</btn>
+                {/if}
+                {if $vars_array.button2_visible == 'true'}
+                    <btn id="gehenbtn" class="derpButton" onclick="" style="background-color: {$greyColor};"><div> <i class="material-icons">close</i> </div> {$vars_array.button2label}</btn>
+                {/if}
+
+                {if $vars_array.button3_visible == 'true'}
+                    <btn id="dienstgangbtn" class="derpButton" onclick="" style="background-color: {$greyColor};"><div> <i class="material-icons">input</i> </div> {$vars_array.button3label}</btn>
+                {/if}
+                {if $vars_array.button4_visible == 'true'}
+                    <btn id="pausebtn" class="derpButton" onclick="" style="background-color: {$greyColor};"><div> <i class="material-icons">launch</i> </div>{$vars_array.button4label}</btn>
+                {/if}
+                {if $vars_array.button5_visible == 'true'}
+                    <btn id="infobtn" class="derpButton" onclick="" style="background-color: {$greyColor};"><div> <i class="material-icons">info</i> </div> {$vars_array.button5label}</btn>
+                {/if}
+
+            {else}
+
+                {if $vars_array.button1_visible == 'true'}
+                    <btn id="kommenbtn" class="derpButton" onclick="buttonAction('1');" style="background-color: {$primaryColor};"><div> <i class="material-icons">done</i> </div> {$vars_array.button1label}</btn>
+                {/if}
+                {if $vars_array.button2_visible == 'true'}
+                    <btn id="gehenbtn" class="derpButton" onclick="buttonAction('4');" style="background-color: {$primaryColor};"><div> <i class="material-icons">close</i> </div> {$vars_array.button2label}</btn>
+                {/if}
+
+                {if $vars_array.button3_visible == 'true'}
+                    <btn id="dienstgangbtn" class="derpButton" onclick="buttonAction('3');" style="background-color: {$primaryColor};"><div> <i class="material-icons">input</i> </div> {$vars_array.button3label}</btn>
+                {/if}
+                {if $vars_array.button4_visible == 'true'}
+                    <btn id="pausebtn" class="derpButton" onclick="buttonAction('5');" style="background-color: {$primaryColor};"><div> <i class="material-icons">launch</i> </div>{$vars_array.button4label}</btn>
+                {/if}
+                {if $vars_array.button5_visible == 'true'}
+                    <btn id="infobtn" class="derpButton" onclick="buttonAction('info');" style="background-color: {$primaryColor};"><div> <i class="material-icons">info</i> </div> {$vars_array.button5label}</btn>
+                {/if}
+
+            {/if}
+
+        </div>
+    </div>
+    <div id="front_meldung" class="row center derpBox" style="font-size: 18px;">
+        {$vars_array.front_meldung}
+    </div>
+</div>
+
+<div id="container2" class="container" style="margin-top: 70px; display: none;">
+    <div class="row center derpBox">
+        <div class="col l3 m3 s3">
+
+        </div>
+        <div class="col l6 m6 s6">
+            <table id="info_table" cellpadding="4px" cellspacing="4px" style="font-size: 14px; text-align: left;">
+                <tbody>
+                {*
+                <tr>
+                    <th>Name, Vorname:</th>
+                    <td id="namevorname">1</td>
+                </tr>
+                *}
+                <tr>
+                    <th>Saldo aktueller Monat:</th>
+                    <td id="gleitzeit"></td>
+                </tr>
+                <tr>
+                    <th>Saldo Vortrag aktueller Monat:</th>
+                    <td id="saldovortragaktmonat"></td>
+                </tr>
+                <tr>
+                    <th> Anspruch aktueller Jahr:</th>
+                    <td id="ansaktjahr"></td>
+                </tr>
+                <tr>
+                    <th> Geplanter Urlaub:</th>
+                    <td id="geplanterurlaub"></td>
+                </tr>
+                <tr>
+                    <th>Resturlaub:</th>
+                    <td id="resturlaub"></td>
+                </tr>
+                </tbody>
+            </table>
+            <btn id="backbutton" class="derpButton" onclick="backbutton();">ZURÜCK</btn>
+        </div>
+        <div class="col l3 m3 s3">
+
+        </div>
+    </div>
+</div>
+
+<div id="container3" class="container" style="margin-top: 70px; display: none;">
+    <div class="row center">
+        <div class="col l3 m3 s3">
+
+        </div>
+        <div class="col l6 m6 s6">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card green darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">{$vars_array.button_action_msg}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col l3 m3 s3">
+
+        </div>
+    </div>
+</div>
+{include file="footer.html"}
+
+<script>
+    var dateausphp = "";
+    var rfid_input_timeout;
+
+    $(document).ready(function() {
+
+        getServerTime();
+
+        setInterval(function() {
+            showTime();
+        }, {$vars_array.pnr_rfid_timeout});
+
+        setInterval(function() {
+            $('#persnr').focus();
+        }, 500);
+
+        setInterval(function() {
+            getServerTime();
+        }, 30000);
+
+
+        {if $vars_array.work_mode == 'true'}
+            var timer = null;
+            $('#persnr').keydown(function(){
+                clearTimeout(timer);
+                timer = setTimeout(CheckRFID, 200);
+            });
+        {else}
+            var timer = null;
+            $('#persnr').keydown(function(){
+                clearTimeout(timer);
+                timer = setTimeout(clearPersInput, {$vars_array.pnr_rfid_timeout});
+            });
+        {/if}
+
+    });
+
+    function clearPersInput() {
+        $('#persnr').val('');
+        $('#persnr').focus();
+        {if $vars_array.work_mode == 'true'}
+            all_buttons_off();
+            $('#front_meldung').text('{$vars_array.front_meldung}');
+        {/if}
+        clearTimeout(rfid_input_timeout);
+    }
+
+    function buttonAction(type) {
+        var persnr = $('#persnr').val();
+
+        if(type != 'info' && persnr != '') {
+            $.ajax({
+                type: 'POST',
+                url: '/php/index.php',
+                async: true,
+                dataType: 'json',
+                data: {
+                    act:		'writeLog',
+                    persnr:       $('#persnr').val(),
+                    stempel_type: type
+                },
+                success: function(data) {
+                    $('#container1').hide();
+                    $('#container3').show();
+                    setTimeout(function() {
+                        $('#container1').show();
+                        $('#container3').hide();
+                    }, {$vars_array.feedback_time});
+
+
+
+			
+
+
+
+/*
+        $.ajax({
+                type: 'POST',
+                url: '/php/index.php',
+                async: true,
+                dataType: 'json',
+                data: {
+                    act:          'openDoor',
+                    persnr:       $('#persnr').val(),
+                    stempel_type: type
+                },
+                success: function(data) {
+
+                }, //End Success
+                complete: function() {
+                   
+                }
+            }); //End Ajax
+*/
+
+
+
+                }, //End Success
+                complete: function() {
+                   clearPersInput();
+                }
+            }); //End Ajax
+        }
+        if(type == 'info' && persnr != '') {
+            showInfo();
+        }
+    }
+
+    function getServerTime() {
+        $.ajax({
+            type: 'POST',
+            url: '/php/index.php',
+            async: true,
+            dataType: 'json',
+            data: {
+                act:		'time'
+            },
+            success: function(data) {
+                dateausphp = data;
+            }
+        });
+    }
+
+    function showTime(){
+        // Arrays mit den deutschen Wochentagen
+        var weekDays = new Array("Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag");
+
+        // Daten holen
+        var date       = new Date(dateausphp);
+        var day        = date.getDate();
+        var month      = date.getMonth() + 1;
+        var year       = date.getYear();
+        var hours      = date.getHours();
+        var minutes    = date.getMinutes();
+        var seconds    = date.getSeconds();
+        var weekDay    = date.getDay();
+
+        // Das Jahr ausgleichen
+        if (year <= 1900) {
+            year += 1900;
+        }
+
+        var monthNames = ["Januar", "Februar", "März", "April", "Mai", "Juni",
+            "Juli", "August", "September", "Oktober", "November", "Dezember"
+        ];
+
+        var d = new Date(dateausphp);
+
+        // Führende Null hinzufügen
+        flagDay    = ((day < 10) ? "0" : "");
+        flagMonth  = ((month < 10) ? ".0" : ".");
+        flagHour   = ((hours < 10) ? "0" : "");
+        flagMinute = ((minutes < 10) ? ":0" : ":");
+        flagSecond = ((seconds < 10) ? ":0" : ":");
+        finalDate = flagDay + day + " " + monthNames[d.getMonth()] + " " + year;  //Monat name anzeigen
+        timestamp = flagHour + hours + flagMinute + minutes;
+
+        time = weekDays[weekDay] + ", " + finalDate + ", " + timestamp;
+
+        // Datum Template ausgeben
+        $('#time').html(time);
+
+    }
+
+    function showInfo() {
+
+        if($('#persnr').val() != '') {
+
+            $('#container1').slideUp();
+            //Load data from DB
+            $.ajax({
+                type: 'POST',
+                url: '/php/index.php',
+                async: true,
+                dataType: 'json',
+                data: {
+                    act:		'showInfo',
+                    persnr:     $('#persnr').val()
+                },
+                success: function(data) {
+                    $.each(data, function(param1, param2) {
+                        $('#'+param1).html(param2);
+                    });
+
+                    $('#container2').slideDown();
+                }
+            });
+
+
+            //Back to the dashboard after 10 sec.
+            setTimeout(function() {
+                backbutton();
+            }, {$vars_array.info_time});
+
+        } //End if persnr
+    }
+
+    function backbutton() {
+        $('#container2').slideUp();
+        $('#container1').slideDown();
+
+        //Clear all fields
+        $('#info_table').find('td').each (function() {
+            $(this).html('');
+        });
+
+        clearPersInput();
+
+    }
+
+    function all_buttons_off() {
+
+        $('.derpButton').css('background-color', '{$greyColor}');
+        $('.derpButton').removeAttr('onclick');
+        $('#backbutton').css('background-color', '{$primaryColor}');
+        $('#backbutton').attr('onclick', 'backbutton();');
+    }
+
+    function CheckRFID(rfid) {
+        rfid = $('#persnr').val();
+        try_again_count = '0';
+        if(rfid != '') {
+            //Check RFID over Ajax Call
+            $.ajax({
+                type: 'POST',
+                url: '/php/index.php',
+                async: true,
+                dataType: 'json',
+                timeout: 5000, //5 Seconds
+                data: {
+                    act:		'CheckRFID',
+                    persnr:     rfid
+                },
+                success: function(data) {
+
+			console.log(data);
+
+                    switch(data['data']) {
+                        case "0":
+                            //RFID Not found
+                            all_buttons_off();
+                            $('#front_meldung').text('RFID Nicht bekannt');
+                        break;
+                        case "1":
+                            //RFID Angemeldet
+
+                            $('#front_meldung').text(data['name']+' - '+data['bezeichnung']);
+                            all_buttons_off();
+                            $('#gehenbtn').attr('onclick', 'buttonAction("4");');
+                            $('#dienstgangbtn').attr('onclick', 'buttonAction("3");');
+                            $('#pausebtn').attr('onclick', 'buttonAction("5");');
+                            $('#infobtn').attr('onclick', 'buttonAction("info");');
+
+
+                            $('#gehenbtn').css('background-color', '{$primaryColor}');
+                            $('#dienstgangbtn').css('background-color', '{$primaryColor}');
+                            $('#pausebtn').css('background-color', '{$primaryColor}');
+                            $('#infobtn').css('background-color', '{$primaryColor}');
+
+                        break;
+                        case "2":
+                            //RFID Abgemeldet
+                            $('#front_meldung').text(data['name']+' - '+data['bezeichnung']);
+                            all_buttons_off();
+                            $('#kommenbtn').attr('onclick', 'buttonAction("1");');
+                            $('#infobtn').attr('onclick', 'buttonAction("info");');
+
+
+                            $('#kommenbtn').css('background-color', '{$primaryColor}');
+                            $('#infobtn').css('background-color', '{$primaryColor}');
+
+                        break;
+                        case "3":
+                            //RFID Abgemeldet
+                            $('#front_meldung').text(data['name']+' - '+data['bezeichnung']);
+                            all_buttons_off();
+                            $('#kommenbtn').attr('onclick', 'buttonAction("1");');
+                            $('#infobtn').attr('onclick', 'buttonAction("info");');
+
+
+                            $('#kommenbtn').css('background-color', '{$primaryColor}');
+                            $('#infobtn').css('background-color', '{$primaryColor}');
+
+                        break;
+                        case "4":
+                            //RFID Abgemeldet
+                            $('#front_meldung').text(data['name']+' - '+data['bezeichnung']);
+                            all_buttons_off();
+                            $('#kommenbtn').attr('onclick', 'buttonAction("1");');
+                            $('#infobtn').attr('onclick', 'buttonAction("info");');
+
+
+                            $('#kommenbtn').css('background-color', '{$primaryColor}');
+                            $('#infobtn').css('background-color', '{$primaryColor}');
+
+                        break;
+                    	case "5":
+                            //RFID Pause extern
+                            $('#front_meldung').text(data['name']+' - '+data['bezeichnung']);
+                            all_buttons_off();
+                            $('#kommenbtn').attr('onclick', 'buttonAction("1");');
+                            $('#infobtn').attr('onclick', 'buttonAction("info");');
+
+
+                            $('#kommenbtn').css('background-color', '{$primaryColor}');
+                            $('#infobtn').css('background-color', '{$primaryColor}');
+
+						break;
+                    }
+                    rfid_input_timeout = setTimeout(function() { clearPersInput(); }, {$vars_array.pnr_rfid_timeout});
+                    try_again_count = '0';
+
+                },
+                error: function(xmlhttprequest, textstatus, message) {
+			console.log(xmlhttprequest);
+			console.log(textstatus);
+			console.log(message);
+                    //Try Again
+                    if(try_again_count == '0') {
+                        setTimeout(function() {
+                            CheckRFID();
+                            try_again_count = '1';
+                        }, 500);
+                    } else if(try_again_count == '1') {
+                        //Alle buttons aktiv
+                        $('#kommenbtn').attr('onclick', 'buttonAction("1");');
+                        $('#gehenbtn').attr('onclick', 'buttonAction("4");');
+                        $('#dienstgangbtn').attr('onclick', 'buttonAction("3");');
+                        $('#pausebtn').attr('onclick', 'buttonAction("5");');
+                        $('#infobtn').attr('onclick', 'buttonAction("info");');
+
+                        $('#kommenbtn').css('background-color', '{$primaryColor}');
+                        $('#gehenbtn').css('background-color', '{$primaryColor}');
+                        $('#dienstgangbtn').css('background-color', '{$primaryColor}');
+                        $('#pausebtn').css('background-color', '{$primaryColor}');
+                        $('#infobtn').css('background-color', '{$primaryColor}');
+
+                        rfid_input_timeout = setTimeout(function() { clearPersInput(); }, {$vars_array.pnr_rfid_timeout});
+
+                    }
+                }
+            });
+        }
+    }
+
+</script>
